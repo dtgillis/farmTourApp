@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <TextView
+        android:id="@+id/qr_how"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="@string/qr_how"/>
+
+     <TextView 
+        android:id="@+id/scan_result" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/qr_how"/>
+<LinearLayout
+    	android:orientation="horizontal"
+        android:paddingLeft="4.0dip"
+        android:paddingTop="5.0dip"
+        android:paddingRight="4.0dip"
+        android:paddingBottom="1.0dip"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scan_result" >
+          
+    <Button android:id="@+id/scan_button"
+        
+        android:layout_weight="1.0"
+        android:background="@drawable/menubackground"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/scan_text" />
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:background="@drawable/menubackground"
+        android:gravity="center"
+        android:text="@string/start_button" />
+    </LinearLayout>
+</RelativeLayout>

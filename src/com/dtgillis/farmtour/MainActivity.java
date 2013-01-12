@@ -10,16 +10,19 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends SherlockActivity implements OnClickListener {
 	Button startButton;
+	TextView welcomeText;
 	ImageView mImage;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		welcomeText = (TextView) findViewById(R.id.welcome_text);
 		mImage = (ImageView) findViewById(R.id.mainPic);
-		startButton =  (Button) findViewById(R.id.start);
+		startButton =  (Button) findViewById(R.id.start_button);
 		startButton.setOnClickListener(this);
 	}
 
@@ -33,8 +36,8 @@ public class MainActivity extends SherlockActivity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		if(v.getId() == R.id.start){
-			Intent intent = new Intent(this,FindFarm.class);
+		if(v.getId() == R.id.start_button){
+			Intent intent = new Intent(this,TourPreface.class);
 			startActivity(intent);
 		}
 		
